@@ -1,0 +1,58 @@
+{
+  "run_date": "2026-11-08",
+  "python": "3.14.8",
+  "os": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+  "typst": "typst 0.15.1 (9dfd3a08)",
+  "ghostscript": "Ghostscript 10.02.1",
+  "tesseract": "tesseract 5.3.4",
+  "tesseract_model": "eng.traineddata",
+  "tesseract_args": "--psm 3 -l eng --dpi <x_dpi>, OMP_THREAD_LIMIT=1",
+  "passage_file": "text/pride-and-prejudice-ch1.txt",
+  "passage_sha256": "970c0e078b7fadbb72f6bf63a15c892af4a9f7edee187d33f9352b855570eefa",
+  "passage_chars": 1201,
+  "passage_source": "Project Gutenberg eBook #1342, Pride and Prejudice by Jane Austen, Chapter I (text/SOURCE.md)",
+  "survives_threshold": 0.98,
+  "modes": [
+    {
+      "name": "standard",
+      "x_dpi": 204,
+      "y_dpi": 98,
+      "one_bit": true
+    },
+    {
+      "name": "fine",
+      "x_dpi": 204,
+      "y_dpi": 196,
+      "one_bit": true
+    },
+    {
+      "name": "control-300-gray",
+      "x_dpi": 300,
+      "y_dpi": 300,
+      "one_bit": false
+    }
+  ],
+  "fonts": {
+    "Liberation Serif": {
+      "file": "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf",
+      "sha256": "705903ae1382f0150f115d6f10a30f5b2f3d6ade649c474afe6366c39174fb65",
+      "fontversion": "137625"
+    },
+    "Liberation Sans": {
+      "file": "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+      "sha256": "4659bc0c58c5028dd488ec928d41d9265db43d9b669fc14ca8b0832daca7b144",
+      "fontversion": "137625"
+    },
+    "DejaVu Sans": {
+      "file": "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+      "sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280",
+      "fontversion": "155320"
+    },
+    "Noto Sans": {
+      "file": "/usr/share/fonts/truetype/noto/NotoSans-Regular.ttf",
+      "sha256": "89c3c497f618fdaa0b2d1e98fef93582f28c71debd2c4a8cdf41f190ced2909d",
+      "fontversion": "131334"
+    }
+  },
+  "eng_traineddata_sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+}

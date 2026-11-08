@@ -1,0 +1,26 @@
+[project]
+name = "fax-legibility-bench"
+version = "0.1.0"
+description = "Measure how small text can be before OCR loses it at ITU-T T.4 fax resolutions."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "JSB Holdings LLC", email = "hello@faxforagents.com" }]
+requires-python = ">=3.12"
+dependencies = ["pillow>=11", "rapidfuzz>=3"]
+keywords = ["fax", "ocr", "tesseract", "itu-t t.4", "legibility", "typography", "fax for agents"]
+
+[project.urls]
+Homepage = "https://faxforagents.com"
+Documentation = "https://faxforagents.com/blog/smallest-font-that-survives-a-fax/"
+Repository = "https://github.com/faxforagents/fax-legibility-bench"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
