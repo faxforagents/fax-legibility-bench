@@ -133,8 +133,10 @@ def rasterise(pdf: Path, mode: Mode, out_dir: Path) -> list[Path]:
     """Ghostscript straight to 1-bit (pngmono, no anti-aliasing) or to 8-bit gray for the control."""
     device = ["-sDEVICE=pngmono"] if mode.one_bit else ["-sDEVICE=pnggray", "-dTextAlphaBits=4", "-dGraphicsAlphaBits=4"]
     pattern = out_dir / f"{pdf.stem}-{mode.name}-%d.png"
+    for old in out_dir.glob(f"{pdf.stem}-{mode.name}-*.png"):
+        old.unlink()  # a repeated size must not pick up the previous pass's pages
     run(["gs", "-q", "-dSAFER", "-dBATCH", "-dNOPAUSE", *device, f"-r{mode.x_dpi}x{mode.y_dpi}", f"-sOutputFile={pattern}", str(pdf)])
-    pages = sorted(out_dir.glob(f"{pdf.stem}-{mode.name}-*.png"), key=lambda p: int(p.stem.rsplit("-", 1)[1]))
+    pages = sorted(out_dir.glob(f"{pdf.stem}-{mode.name}-[0-9]*.png"), key=lambda p: int(p.stem.rsplit("-", 1)[1]))
     if not pages:
         raise RuntimeError(f"ghostscript wrote no page for {pdf.name} {mode.name}")
     return pages

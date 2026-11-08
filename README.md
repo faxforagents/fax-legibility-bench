@@ -56,13 +56,13 @@ to 16 pt sizes gave the same numbers.
    eBook 1342. [`text/SOURCE.md`](text/SOURCE.md) gives the file, its hash and the two edits. It is
    1,201 characters after whitespace is collapsed and has no digits.
 2. Layout: [Typst](https://typst.app/) sets it on US Letter with 1 inch margins, hyphenation off,
-   at every whole size from 4 to 16 pt. Typst sees only the four font files, with fallback off.
+   at every whole size from 4 to 16 pt. Typst gets the four font files and no system fonts, with fallback off.
 3. Fonts: Liberation Serif and Liberation Sans 2.1.5, DejaVu Sans 2.37 and Noto Sans from Ubuntu's
    fonts-noto-core 20201225. Those were installed on the test machine. `environment.json` records each
    file and its sha256.
 4. Raster: Ghostscript `pngmono` writes 1-bit pages with no anti-aliasing. Standard is 204 x 98 dpi
    and fine is 204 x 196 dpi. Rows are then repeated, nearest neighbour, until pixels are square at
-   204 dpi. That is how a printed fax shows each scan line. The control is 300 dpi 8-bit gray.
+   204 dpi: two or three times each at standard, once or twice at fine. That is how a printed fax shows each scan line. The control is 300 dpi 8-bit gray.
 5. OCR: Tesseract 5.3.4, English model, `--psm 3 --dpi 204` (300 for the control),
    `OMP_THREAD_LIMIT=1`.
 6. Score: Both texts are NFKC-normalised, curly quotes and dashes are folded to plain ones and
