@@ -43,7 +43,11 @@ def test_readme_bibtex_matches_the_citation_file():
     assert block, "README.md has no BibTeX block"
     year, month, _day = fields["date-released"].split("-")
     # cffconvert writes the month without a leading zero.
-    assert block[1] == (
+    # The README gives the entry a real key. cffconvert writes a placeholder, so the key is put back before
+    # the whole entry is compared.
+    key = "faxlegibilitybench" + year
+    assert block[1].startswith(f"@misc{{{key},\n")
+    assert block[1].replace(f"@misc{{{key},", "@misc{YourReferenceHere,", 1) == (
         "@misc{YourReferenceHere,\n"
         "author = {JSB Holdings LLC},\n"
         f"month = {{{int(month)}}},\n"

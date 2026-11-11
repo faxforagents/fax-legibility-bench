@@ -110,7 +110,7 @@ hosted MCP server and SDKs for AI agents that send and receive faxes. It is made
 GitHub's "Cite this repository" button reads [`CITATION.cff`](CITATION.cff). The same entry in BibTeX:
 
 ```bibtex
-@misc{YourReferenceHere,
+@misc{faxlegibilitybench2026,
 author = {JSB Holdings LLC},
 month = {11},
 title = {fax-legibility-bench},
