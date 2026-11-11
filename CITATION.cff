@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this bench or its results, please cite it as below."
+type: software
+title: "fax-legibility-bench"
+abstract: "Measure how small text can be before OCR loses it at ITU-T T.4 fax resolutions."
+authors:
+  - name: "JSB Holdings LLC"
+    email: "hello@faxforagents.com"
+    website: "https://faxforagents.com"
+version: 0.1.0
+date-released: "2026-11-08"
+license: MIT
+repository-code: "https://github.com/faxforagents/fax-legibility-bench"
+url: "https://faxforagents.com/blog/smallest-font-that-survives-a-fax/"
+keywords:
+  - fax
+  - ocr
+  - tesseract
+  - "itu-t t.4"
+  - legibility
+  - typography
+  - "fax for agents"

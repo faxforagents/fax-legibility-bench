@@ -105,6 +105,22 @@ send a PDF as a fax from code.
 Fax for Agents is a fax API, a
 hosted MCP server and SDKs for AI agents that send and receive faxes. It is made by JSB Holdings LLC.
 
+## Citing
+
+GitHub's "Cite this repository" button reads [`CITATION.cff`](CITATION.cff). The same entry in BibTeX:
+
+```bibtex
+@misc{YourReferenceHere,
+author = {JSB Holdings LLC},
+month = {11},
+title = {fax-legibility-bench},
+url = {https://faxforagents.com/blog/smallest-font-that-survives-a-fax/},
+year = {2026}
+}
+```
+
+The numbers belong to one run, so give the run date, 2026-11-08, when you quote them.
+
 ## Licence
 
 MIT, see [LICENSE](LICENSE). The passage is in the public domain in the United States.
